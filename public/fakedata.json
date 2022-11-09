@@ -1,0 +1,57 @@
+[
+	
+    {
+        "service_name":"Legal Advisor",
+        "service_id":"01",
+        "image_url":"https://inkhive.com/wp-content/uploads/2020/08/legal-advisor.jpg",
+        "rating":"4.1",
+        "price":"40",
+        "description":"A Legal Advisor is a person who provides legal advice, often in an official capacity. Government officials that qualify as lawyers (jurists) in certain countries can get the title of Legal Adviser. A Legal Advisor or Legal Consultant provides legal guidance to businesses or clients. Their primary duties include structuring solutions for disputes, providing support in legal issues, and reviewing legal materials and contracts."
+    },
+    
+    {
+        "service_name":"Marrige Advisor",
+        "service_id":"02",
+        "image_url":"https://img.freepik.com/premium-photo/couple-talking-marriage-counselor-during-therapy_107420-92858.jpg?w=2000",
+        "rating":"4.2",
+        "price":"50",
+        "description":"If you are going through a rough patch in your marriage, you might need marriage counseling to communicate with your partner better. Often, your relationship with your spouse might face some trouble or lose the spark due to various reasons. You might feel like you have lost connection with them. If you and your partner are having frequent arguments and fail to express your views to each other, marriage counseling might be a good option for you."
+    },
+    
+    {
+        "service_name":"Family Law Advisor",
+        "service_id":"03",
+        "image_url":"https://5.imimg.com/data5/AO/LU/GLADMIN-24200219/family-law-500x500.png",
+        "rating":"4.3",
+        "price":"60",
+        "description":"As a lawyer, I offer services for women and men who want to avoid the high costs of going to family court with a lawyer. I am different because you are different. You are motivated to do the research and represent yourself. I am here to fill the gaps and answer your questions. Call it peace of mind for a small price. Tell me what you need. I will tailor legal advice to your specific situation. Find out more about how this service work."
+    },
+    
+    {
+        "service_name":"Contract Law Advisor",
+        "service_id":"04",
+        "image_url":"https://www.healthlawadvisor.com/files/2020/03/Contract-shutterstock_224895475-scaled.jpg",
+        "rating":"4.4",
+        "price":"70",
+        "description":"The contract Advisor represents that in advance of executing this Agreement, he/she has been duly certified as a Contract Advisor by the NFLPA. Contract Advisor shall not be entitled to receive any fee for the performance of his/her services pursuant to this Agreement until the Player receives the compensation upon which the fee is based."
+    },
+    
+    {
+        "service_name":"Industrial Legal Service Advisor",
+        "service_id":"05",
+        "image_url":"https://www.corpvs.org/wp-content/uploads/2020/11/corpvs-legaladvice-min.jpg",
+        "rating":"4.5",
+        "price":"80",
+        "description":"Advisors provide companies with guidance in matters relating to law. Within the construction industry, a legal advisor would assist with client contracts, draft legal documents and resolve disputes. As a legal advisor will be responsible for handling a companys legal responsibilities. Duties may include preparing contracts and documentation and providing a variety of legal support."
+    },
+    
+    {
+        "service_name":"Criminal Case Advisor",
+        "service_id":"06",
+        "image_url":"https://jotwani.com/wp-content/uploads/2021/06/General-Criminal-Law-1-1024x600.png",
+        "rating":"4.6",
+        "price":"90",
+        "description":"Criminal law consultancy is a professional activity of a lawyer in order to guide, answer and explain the provisions of criminal law to people who have the need to inquire into, consult and explain the general law and legal issues related to the investigation, prosecution, and trial. Criminal cases are understood as cases with criminal signs prescribed in the penal code and have been prosecuted by criminal procedure-conducting bodies according to the order."
+    }
+    
+]
