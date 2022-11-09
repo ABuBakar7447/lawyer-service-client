@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import banner from '../../Utilities/Picture/banner-1.jpg'
 
 const Banner = () => {
@@ -18,7 +19,7 @@ const Banner = () => {
                 
             </div>
             <div className="absolute flex justify-start w-2/5">
-            <button className="btn btn-info ml-5 lg:mt-44 md:mt-40 mt-20 ">Start Service</button>
+            <Link to='/service'><button className="btn btn-info ml-5 lg:mt-44 md:mt-40 mt-20 font-bold">Start Service</button></Link>
             </div>
   
         </div>
