@@ -22,9 +22,9 @@ const ServiceCard = ({viewService}) => {
                     <h3 className='font-bold'>Rating: {rating}</h3>
                     <p>{description.substring(0,100)} <Link className='underline text-info' to=''>View More</Link></p>
                     <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn btn-primary btn-sm">Buy Now</button>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     );

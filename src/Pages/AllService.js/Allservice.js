@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ServiceCard from './ServiceCard';
+import ServiceCard from '../Home/ServiceCard';
 
-const Services = () => {
-    const showService= 3;
+
+const Allservice = () => {
     const [service, setService] = useState([]);
     useEffect(()=>{
         fetch('fakedata.json')
@@ -18,20 +18,18 @@ const Services = () => {
             
                 <div className='w-11/12 grid gap-6 gird-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto my-5 '>
                 {
-                service.slice(0, showService).map(viewService =><ServiceCard
-                key={viewService.service_id}
-                viewService={viewService}
-                ></ServiceCard> )
+                    service.map(viewService =><ServiceCard
+                        key={viewService.service_id}
+                        viewService={viewService}
+                    ></ServiceCard>)
                 }
                 </div>
 
-                <div className="flex justify-center">
-                    <button className="btn btn-warning">More Service</button>
-                </div>
+                
             
            </div>
         </div>
     );
 };
 
-export default Services;
+export default Allservice;

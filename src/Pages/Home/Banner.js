@@ -18,7 +18,7 @@ const Banner = () => {
                 
             </div>
             <div className="absolute flex justify-start w-2/5">
-            <button className="btn btn-info ml-5 lg:mt-44 md:mt-40 mt-20 ">Hello</button>
+            <button className="btn btn-info ml-5 lg:mt-44 md:mt-40 mt-20 ">Start Service</button>
             </div>
   
         </div>

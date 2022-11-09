@@ -6,6 +6,7 @@ import logo2 from '../../../Utilities/Picture/image.png'
 const Header = () => {
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
+        <li><Link to='/service'>Service</Link></li>
     </>
     return (
         <div className="navbar bg-neutral text-neutral-content">
