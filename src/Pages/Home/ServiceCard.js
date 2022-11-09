@@ -1,6 +1,7 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { Link } from 'react-router-dom';
 
 
 const ServiceCard = ({viewService}) => {
@@ -16,10 +17,10 @@ const ServiceCard = ({viewService}) => {
                 </PhotoProvider>
                 
                 <div className="card-body">
-                    <h2 className="card-title"></h2>
-                    <h3 className='font-bold'></h3>
-                    <h3 className='font-bold'></h3>
-                    <p></p>
+                    <h2 className="card-title">{service_name}</h2>
+                    <h3 className='font-bold'>Price: ${price}</h3>
+                    <h3 className='font-bold'>Rating: {rating}</h3>
+                    <p>{description.substring(0,100)} <Link className='underline text-info' to=''>View More</Link></p>
                     <div className="card-actions justify-end">
                     <button className="btn btn-primary">Buy Now</button>
                 </div>
