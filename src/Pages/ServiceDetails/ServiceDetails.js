@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import Reviews from '../Reviews/Reviews';
+import Comment from '../Reviews/Comment/Comment';
 
 
 
@@ -27,10 +28,12 @@ const ServiceDetails = () => {
             </div>
 
             <div>
-            <Reviews _id={_id}></Reviews>
+                <Reviews _id={_id}></Reviews>
             </div>
 
-            
+            <div className='w-3/5 mx-auto my-10'>
+                <Comment _id = {_id} service_name={service_name}></Comment>
+            </div>
             
         </div>
     );

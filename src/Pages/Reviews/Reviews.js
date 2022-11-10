@@ -24,9 +24,7 @@ const Reviews = ({_id}) => {
             }
             </div>
 
-            <div className='w-3/5 mx-auto my-10'>
-                <Comment></Comment>
-            </div>
+            
             
         </div>
     );
