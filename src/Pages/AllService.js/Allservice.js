@@ -23,6 +23,8 @@ const Allservice = () => {
                         viewService={viewService}
                     ></ServiceCard>)
                 }
+
+                
                 </div>
 
                 
