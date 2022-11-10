@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import Comment from './Comment/Comment';
 import DetailsReview from './DetailsReview';
 
 const Reviews = ({_id}) => {
@@ -16,11 +17,15 @@ const Reviews = ({_id}) => {
     },[_id])
     return (
         <div>
-            <div className='w-2/5 mx-auto '>
+            <div className='w-3/5 bg-slate-400 mx-auto border-2 rounded border-indigo-500'>
                 <p className='text-center font-bold underline underline-offset-4'>User Review</p>
             {
                 commet.map(usercomment=><DetailsReview key={usercomment._id} usercomment={usercomment}></DetailsReview>)
             }
+            </div>
+
+            <div className='w-3/5 mx-auto my-10'>
+                <Comment></Comment>
             </div>
             
         </div>
