@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ServiceCard = ({viewService}) => {
     console.log(viewService)
-    const {service_name, price, image_url, rating, description} = viewService
+    const {_id, service_name, price, image_url, rating, description} = viewService
     return (
         <div>
             <div className="card card-compact bg-neutral text-neutral-content shadow-xl p-2">
@@ -21,10 +21,10 @@ const ServiceCard = ({viewService}) => {
                     <h3 className='font-bold'>Price: ${price}</h3>
                     <h3 className='font-bold'>Rating: {rating}</h3>
                     <p>{description.substring(0,100)} 
-                        <Link className='underline text-info' to=''>View More</Link>
+                        <Link className='underline text-info' to={`/service/${_id}`}>View More</Link>
                     </p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary btn-sm">Buy Now</button>
+                        <Link  to={`/service/${_id}`}><button className="btn btn-primary btn-sm">Hire Now</button></Link>
                     </div>
                 </div>
             </div>
