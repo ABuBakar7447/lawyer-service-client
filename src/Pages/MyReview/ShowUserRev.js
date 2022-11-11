@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaAngleDoubleLeft, FaUser, FaTrash, FaEdit } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ShowUserRev = ({details, haldleDelete}) => {
     const {_id, service_name, user_name, image_url,comment} = details
@@ -18,7 +19,8 @@ const ShowUserRev = ({details, haldleDelete}) => {
 
                 <div className='flex'>
                 <div className='flex btn w-32 my-5' onClick={()=>haldleDelete(_id)}><span>Delete</span><span className='p-1.5 pl-1'><FaTrash></FaTrash></span></div>
-                <div className='flex btn w-32 my-5 ml-3 mr-2'><span>Edit</span><span className='p-1.5 pl-1'><FaEdit></FaEdit> </span></div>
+                
+                <Link to={`/update/${_id}`} className='flex btn w-32 my-5 ml-3 mr-2'><span>Edit</span><span className='p-1.5 pl-1'><FaEdit></FaEdit> </span></Link>
                 </div>
                 
                 </div>

@@ -36,7 +36,7 @@ const Comment = ({_id, service_name}) => {
         .then(data => {console.log(data)
             if(data.acknowledged){
                 alert('Thanks for your comment')
-                form.rest()
+                form.reset()
             }
         })
         .catch(error => console.error(error))
@@ -47,15 +47,15 @@ const Comment = ({_id, service_name}) => {
             <p className='text-center font-bold text-blue-900 text-2xl'>Wants to review!</p>
             <form onSubmit={handleComment}>
                 <div className='grid grid-cols-1'>
-                    <input type="text" name='user_name' placeholder="Your name" className="input input-bordered my-2" />
+                    <input type="text" name='user_name' placeholder="Your name" className="input input-bordered my-2" required/>
 
                     <input type="text" name='image_url' placeholder="Your Picture link" className="input input-bordered my-2" />
 
-                    <input type="text" name='rating' placeholder="Your rating out of 5" className="input input-bordered my-2" />
+                    <input type="text" name='rating' placeholder="Your rating out of 5" className="input input-bordered my-2" required/>
 
                     <input type="text" name='email' placeholder="" className="input input-bordered my-2" defaultValue={user?.email} readOnly />
 
-                    <input type="text" name='comment' placeholder="Please Comment Here" className="input input-bordered h-20 my-2" />
+                    <input type="text" name='comment' placeholder="Please Comment Here" className="input input-bordered h-20 my-2" required/>
 
                 </div>
                     <input className='btn' type="submit" value="Submit"/>
