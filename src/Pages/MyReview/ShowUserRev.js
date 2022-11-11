@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaAngleDoubleLeft, FaUser, FaTrash, FaEdit } from 'react-icons/fa';
 
-const ShowUserRev = ({details}) => {
+const ShowUserRev = ({details, haldleDelete}) => {
     const {_id, service_name, user_name, image_url,comment} = details
 
     return (
@@ -17,7 +17,7 @@ const ShowUserRev = ({details}) => {
                 <p><span className='font-bold text-rose-600 pl-1'>Comment:</span> <span className='font-bold'>{comment}</span></p>
 
                 <div className='flex'>
-                <div className='flex btn w-32 my-5'><span>Delete</span><span className='p-1.5 pl-1'><FaTrash></FaTrash></span></div>
+                <div className='flex btn w-32 my-5' onClick={()=>haldleDelete(_id)}><span>Delete</span><span className='p-1.5 pl-1'><FaTrash></FaTrash></span></div>
                 <div className='flex btn w-32 my-5 ml-3 mr-2'><span>Edit</span><span className='p-1.5 pl-1'><FaEdit></FaEdit> </span></div>
                 </div>
                 
