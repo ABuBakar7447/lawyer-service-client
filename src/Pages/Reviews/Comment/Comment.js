@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
 const Comment = ({_id, service_name}) => {
-    console.log(_id,service_name)
+    
     const {user} = useContext(AuthContext)
 
     const handleComment=event=>{

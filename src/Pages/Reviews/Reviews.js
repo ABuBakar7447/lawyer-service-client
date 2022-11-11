@@ -6,10 +6,7 @@ import DetailsReview from './DetailsReview';
 const Reviews = ({_id}) => {
 
     const[commet, setCommet]=useState([])
-    console.log(commet)
 
-    
-    
     useEffect(()=>{
         fetch(`http://localhost:5000/reviews?service_id=${_id}`)
         .then(res => res.json())

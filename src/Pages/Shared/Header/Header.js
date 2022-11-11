@@ -7,7 +7,9 @@ const Header = () => {
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/service'>Service</Link></li>
+        <li><Link to='/myreview'>My Review</Link></li>
         <li><Link to='/login'>Login</Link></li>
+
     </>
     return (
         <div className="navbar bg-neutral text-neutral-content">
