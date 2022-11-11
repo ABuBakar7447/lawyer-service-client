@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaAngleDoubleLeft, FaUser, FaTrash, FaEdit } from 'react-icons/fa';
+import { FaUser, FaTrash, FaEdit } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ShowUserRev = ({details, haldleDelete}) => {

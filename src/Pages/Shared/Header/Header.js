@@ -5,14 +5,25 @@ import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import logo2 from '../../../Utilities/Picture/image.png'
 
 const Header = () => {
-    const {user} = useContext(AuthContext)
-    const menuItems = <>
+    const {user, userLogOut} = useContext(AuthContext)
+
+    const handleLogout=()=>{
+        userLogOut()
+        .then()
+        .catch()
+    }
+    const menuItems = 
+    <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/service'>Service</Link></li>
+        <li><Link to='/blogs'>Blogs</Link></li>
         {
             user?.email?
             <><li><Link to='/myreview'>My Review</Link></li>
-            <li><Link to='/myreview'>Logout</Link></li>
+            <li><Link to='/addservice'>Add Service</Link></li>
+            <li>
+                <button onClick={handleLogout}>Log Out</button>
+            </li>
             </>
             :
             <li><Link to='/login'>Login</Link></li>
@@ -39,9 +50,7 @@ const Header = () => {
                     {menuItems}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Get started</a>
-            </div>
+            
         </div>
             );
 };

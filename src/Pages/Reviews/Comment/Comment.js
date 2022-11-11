@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
-const Comment = ({_id, service_name}) => {
+const Comment = () => {
+    const {_id, service_name, image_url, description, rating, price} = useLoaderData()
     
     const {user} = useContext(AuthContext)
 
@@ -45,7 +47,7 @@ const Comment = ({_id, service_name}) => {
     return (
         <div>
             <p className='text-center font-bold text-blue-900 text-2xl'>Wants to review!</p>
-            <form onSubmit={handleComment}>
+            <form onSubmit={handleComment} className='w-3/5 mx-auto'>
                 <div className='grid grid-cols-1'>
                     <input type="text" name='user_name' placeholder="Your name" className="input input-bordered my-2" required/>
 

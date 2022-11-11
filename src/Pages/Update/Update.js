@@ -6,8 +6,8 @@ const Update = () => {
     const {user} =useContext(AuthContext)
     const editDetails = useLoaderData()
     console.log(editDetails)
-    const {service_name,_id}=editDetails
-    console.log(service_name,_id)
+    const {service_name,_id,service_id}=editDetails
+    console.log(service_name,service_id)
 
     const handleEdit =event=>{
         event.preventDefault()
@@ -22,7 +22,7 @@ const Update = () => {
         const review = {
             
             service_name: service_name,
-            service_id: _id,
+            service_id: service_id,
             user_name: user_name,
             image_url: image_url,
             rating: rating,
