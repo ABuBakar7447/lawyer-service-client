@@ -9,11 +9,11 @@ const ExtraSec1 = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={logo1} alt="" className=" rounded-lg shadow-2xl" />
                     <div>
-                    <h1 className="text-4xl text-center font-bold">Choose Our Service Because..</h1>
+                    <h1 className="text-4xl text-center font-bold">Choose The Service Because..</h1>
                     <p className="py-6">Lawyers are in a unique position to help individuals, groups, and organizations with their legal problems and to further the public good. Public interest lawyers champion legal causes for the greater good of society and help those in need of legal assistance who might not otherwise be able to afford attorneys.Lawyers in private practice often perform pro bono work to help low-income individuals and underserved portions of the population, such as the elderly, victims of domestic abuse, and children. In fact, many bar associations require that attorneys commit to a certain number of pro bono hours each year. </p>
                     <div className='flex justify-evenly my-4'>
                         <div className='text-center'>
-                            <p className='text-2xl font-bold'>10k</p>
+                            <p className='text-2xl font-bold'>1.2k</p>
                             <p className='text-rose-400 font-bold'>Global <br/> Customer</p>
                         </div>
                         <div className='text-center'>
