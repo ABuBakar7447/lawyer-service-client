@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import Reviews from '../Reviews/Reviews';
 import Comment from '../Reviews/Comment/Comment';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 
 
 const ServiceDetails = () => {
+    const {user} = useContext(AuthContext)
     const {_id, service_name, image_url, description, rating, price} = useLoaderData()
 
-    const handlebtn=()=>{
-        alert('if you are not logged please log in First, otherwise it will take you to the directory')
-    }
+    
     return (
         <div>
             <div className="card card-compact  bg-base-100 shadow-xl mx-auto w-3/4 my-10">
@@ -34,13 +34,27 @@ const ServiceDetails = () => {
             <div>
                 <Reviews _id={_id}></Reviews>
             </div>
-            <div className='flex my-5'>
+            {/* <div className='flex my-5'>
             <Link onClick={handlebtn} to={`/comment/${_id}`} className='btn mx-auto'>Want to Comment</Link>
+            </div> */}
+            <p className='font-bold text-center text-2xl text-rose-600'>Wants to comment?</p>
+            
+            <div >
+            {
+                user?.email?
+                <div>
+
+                    <Comment _id = {_id} service_name={service_name}></Comment>
+
+                </div>
+                :
+                <p className='text-center mb-6'>Please login first before comment. <Link to='/login' className='text-info underline'>Login</Link>
+                </p>
+            }
+                
             </div>
 
-            {/* <div className='w-3/5 mx-auto my-10'>
-                <Comment _id = {_id} service_name={service_name}></Comment>
-            </div> */}
+            
             
         </div>
     );

@@ -47,13 +47,13 @@ const AddService = () => {
 
     return (
         <div>
-            <form onSubmit={handleService} className='w-3/5 mx-auto'>
+            <form onSubmit={handleService} className='w-3/5 mx-auto my-5'>
                 <div className='grid grid-cols-1'>
                     <input type="text" name='service_name' placeholder="Service name" className="input input-bordered my-2" required/>
 
                     <input type="text" name='service_id' placeholder="Service Id" className="input input-bordered my-2" required/>
 
-                    <input type="text" name='image_url' placeholder="Your Picture link" className="input input-bordered my-2" />
+                    <input type="text" name='image_url' placeholder="Your Picture link" className="input input-bordered my-2" required/>
 
                     <input type="text" name='rating' placeholder="Your rating out of 5" className="input input-bordered my-2" required/>
 

@@ -53,12 +53,12 @@ const router = createBrowserRouter([
                 element:<PrivateRoute><Update></Update></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
             },
-            {
-                path:'/comment/:id',
-                element:<PrivateRoute><Comment></Comment></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/service/${params.id}`)
+            // {
+            //     path:'/comment/:id',
+            //     element:<PrivateRoute><Comment></Comment></PrivateRoute>,
+            //     loader:({params})=>fetch(`http://localhost:5000/service/${params.id}`)
                 
-            },
+            // },
             {
                 path:'/blogs',
                 element:<Blog></Blog>
