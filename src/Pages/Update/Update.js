@@ -29,7 +29,7 @@ const Update = () => {
             email: email,
             comment: comment
         }
-        const proceed = window.confirm('Do you want to remove your comment?');
+        const proceed = window.confirm('Do you want to update your comment?');
         if(proceed){
             fetch(`http://localhost:5000/reviews/${_id}`,{
             method: 'PUT',

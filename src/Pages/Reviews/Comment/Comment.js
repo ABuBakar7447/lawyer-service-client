@@ -47,7 +47,7 @@ const Comment = ({_id, service_name}) => {
 
     return (
         <div>
-            <p className='text-center font-bold text-blue-900 text-2xl'>Wants to review!</p>
+            
             <form onSubmit={handleComment} className='w-3/5 mx-auto my-5'>
                 <div className='grid grid-cols-1'>
                     <input type="text" name='user_name' placeholder="Your name" className="input input-bordered my-2" required/>
