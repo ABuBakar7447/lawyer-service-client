@@ -8,6 +8,9 @@ const Comment = ({_id, service_name}) => {
     
     const {user} = useContext(AuthContext)
 
+
+    //handling comment section if user wants to add comment
+
     const handleComment=event=>{
         
         const form = event.target;
@@ -28,6 +31,9 @@ const Comment = ({_id, service_name}) => {
             comment: comment
         }
 
+
+    //sending data to server to add comment 
+
         fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
@@ -45,6 +51,9 @@ const Comment = ({_id, service_name}) => {
         .catch(error => console.error(error))
     }
 
+
+    //design of comment section form
+    
     return (
         <div>
             

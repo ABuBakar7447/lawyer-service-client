@@ -2,6 +2,8 @@ import React from 'react';
 import logo1 from '../../Utilities/Picture/why-us2.jpg'
 
 const ExtraSec1 = () => {
+
+    //design of extra section part 1
     return (
         <div>
             <h1 className='lg:text-4xl md:text-3xl sm:text-2xl font-bold text-rose-600 text-center mt-16 mb-10'>Why Legal Help Need ! </h1> 
@@ -14,7 +16,7 @@ const ExtraSec1 = () => {
                     <div className='flex justify-evenly my-4'>
                         <div className='text-center'>
                             <p className='text-2xl font-bold'>1.2k</p>
-                            <p className='text-rose-400 font-bold'>Global <br/> Customer</p>
+                            <p className='text-rose-400 font-bold'>Customer</p>
                         </div>
                         <div className='text-center'>
                             <p className='text-2xl font-bold'>7</p>

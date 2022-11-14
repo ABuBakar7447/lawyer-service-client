@@ -6,13 +6,14 @@ import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import MyReview from "../../Pages/MyReview/MyReview";
-import Comment from "../../Pages/Reviews/Comment/Comment";
+
 import ServiceDetails from "../../Pages/ServiceDetails/ServiceDetails";
 import SignUp from "../../Pages/SignUp/SignUp";
 import Update from "../../Pages/Update/Update";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
+//creating route for the pages
 
 const router = createBrowserRouter([
     {
@@ -53,12 +54,7 @@ const router = createBrowserRouter([
                 element:<PrivateRoute><Update></Update></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
             },
-            // {
-            //     path:'/comment/:id',
-            //     element:<PrivateRoute><Comment></Comment></PrivateRoute>,
-            //     loader:({params})=>fetch(`http://localhost:5000/service/${params.id}`)
-                
-            // },
+            
             {
                 path:'/blogs',
                 element:<Blog></Blog>

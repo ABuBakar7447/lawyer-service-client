@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
 
     const {logInUser} = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
-    const from = location.state?.from?.pathname || '/'
+    const from = location.state?.from?.pathname || '/';
+    useTitle('Login')
+
+    //handlign log data
 
     const handleLogin= event=>{
         event.preventDefault();
@@ -24,6 +28,7 @@ const Login = () => {
         .catch(error =>console.error(error));
     }
 
+    //design of login page
     return (
         <div className="hero">
             <div className="hero-content flex-col lg:flex-row">

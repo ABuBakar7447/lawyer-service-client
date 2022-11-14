@@ -31,14 +31,14 @@ const ServiceDetails = () => {
                 </div>
             </div>
 
+{/* sending data to review part in order gain all review based on matched service_id */}
             <div>
                 <Reviews _id={_id}></Reviews>
             </div>
-            {/* <div className='flex my-5'>
-            <Link onClick={handlebtn} to={`/comment/${_id}`} className='btn mx-auto'>Want to Comment</Link>
-            </div> */}
+            
             <p className='font-bold text-center text-2xl text-rose-600'>Wants to comment?</p>
             
+{/* using optional chaining if user logged in then show comment form otherwise show login option */}
             <div >
             {
                 user?.email?

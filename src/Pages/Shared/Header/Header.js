@@ -17,6 +17,8 @@ const Header = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/service'>Service</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
+    
+    {/* creating optional chaing in order to show extra route if user logged in */}
         {
             user?.email?
             <><li><Link to='/myreview'>My Review</Link></li>

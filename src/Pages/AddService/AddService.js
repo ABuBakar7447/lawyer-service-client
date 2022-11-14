@@ -1,10 +1,13 @@
 import React from 'react';
+import useTitle from '../../hooks/useTitle';
 
 const AddService = () => {
 
     
+       useTitle('AddService') 
         
-        
+
+    //adding service
 
         const handleService=event=>{
         
@@ -21,12 +24,14 @@ const AddService = () => {
                 
                 service_name: service_name,
                 service_id: service_id,
-                image_url: description,
-                rating: image_url,
-                price: rating,
-                description: price,
+                image_url: image_url ,
+                rating: rating ,
+                price: price ,
+                description: description,
             }
     
+        //sending service data through post
+        
             fetch('http://localhost:5000/services', {
                 method: 'POST',
                 headers: {
@@ -37,7 +42,7 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {console.log(data)
                 if(data.acknowledged){
-                    alert('Thanks for your service')
+                    alert('Thanks for adding a service')
                     form.reset()
                 }
             })

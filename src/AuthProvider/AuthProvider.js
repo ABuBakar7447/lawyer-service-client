@@ -10,26 +10,31 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
+    //sign up
    const createUser = (email,password) =>{
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password)
    }
 
+   //login
    const logInUser = (email, password) =>{
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password)
    }
 
+   //google log in
    const providerGoogleLogin = (provider) =>{
     setLoading(true);
     return signInWithPopup(auth, provider);
-}
+    }
 
+    //logout
    const userLogOut =()=>{
     
     return signOut(auth)
    }
 
+   
    useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, currentUser =>{
         console.log(currentUser);

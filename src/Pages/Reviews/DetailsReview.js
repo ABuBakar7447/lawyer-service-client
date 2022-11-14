@@ -4,6 +4,9 @@ import { FaUser } from 'react-icons/fa';
 const DetailsReview = ({usercomment}) => {
     
     const {_id, service_name, user_name, image_url,comment} = usercomment
+    
+    //design of user review based on service
+    
     return (
         <div>
      

@@ -1,20 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 import ShowUserRev from './ShowUserRev';
 
 const MyReview = () => {
     const {user} =useContext(AuthContext)
-    console.log(user)
+    useTitle('MyReview')
 
     const[userDetails, setUser]=useState([])
     console.log(userDetails)
 
+    //collecting data base on user email
     useEffect(()=>{
         fetch(`http://localhost:5000/userreview?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>setUser(data))
     },[user?.email])
 
+
+    //handling delete button in order delete review
     const haldleDelete = id =>{
         const proceed = window.confirm('Do you want to remove your comment?');
         if(proceed){
@@ -34,6 +38,8 @@ const MyReview = () => {
         }
     }
 
+
+    //sending data to showuserRev in order to design the page
     return (
         <div className=''>
             {

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SecExt2 = () => {
+
+    //design of extra section part 2
     return (
         
         <div >

@@ -30,6 +30,8 @@ const Update = () => {
             comment: comment
         }
         const proceed = window.confirm('Do you want to update your comment?');
+
+    //sending edited date to the server
         if(proceed){
             fetch(`http://localhost:5000/reviews/${_id}`,{
             method: 'PUT',
