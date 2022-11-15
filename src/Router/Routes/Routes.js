@@ -17,52 +17,52 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
-        path:'/',
-        element:<Main></Main>,
-        children:[
+        path: '/',
+        element: <Main></Main>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'/service',
-                element:<Allservice></Allservice>
+                path: '/service',
+                element: <Allservice></Allservice>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/addservice',
-                element:<AddService></AddService>
+                path: '/addservice',
+                element: <AddService></AddService>
             },
             {
-                path:'/signup',
-                element:<SignUp></SignUp>
+                path: '/signup',
+                element: <SignUp></SignUp>
             },
             {
-                path:'/service/:id',
-                element:<ServiceDetails></ServiceDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/service/${params.id}`)
+                path: '/service/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: ({ params }) => fetch(`https://lawyer-service-server.vercel.app/service/${params.id}`)
             },
             {
-                path:'/myreview',
-                element:<PrivateRoute><MyReview></MyReview></PrivateRoute>
+                path: '/myreview',
+                element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
             },
             {
-                path:'/update/:id',
-                element:<PrivateRoute><Update></Update></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/reviews/${params.id}`)
+                path: '/update/:id',
+                element: <PrivateRoute><Update></Update></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://lawyer-service-server.vercel.app/reviews/${params.id}`)
             },
-            
+
             {
-                path:'/blogs',
-                element:<Blog></Blog>
-                
-                
+                path: '/blogs',
+                element: <Blog></Blog>
+
+
             },
-            
-            
+
+
 
         ]
     }
