@@ -5,11 +5,13 @@ import 'react-photo-view/dist/react-photo-view.css';
 import Reviews from '../Reviews/Reviews';
 import Comment from '../Reviews/Comment/Comment';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 
 
 const ServiceDetails = () => {
+    useTitle('ServiceDetails')
     const {user} = useContext(AuthContext)
     const {_id, service_name, image_url, description, rating, price} = useLoaderData()
 
